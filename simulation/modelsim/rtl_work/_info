@@ -1,0 +1,26 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\Project\ALU\simulation\modelsim
+vALU
+!i10b 1
+!s100 gB<3DeJ9^^1eTBf:Rbf7^1
+I[7Iadcn;6DYMmWmgb8RfE2
+VPoN8dZ3?8z1dYF[akOZj=2
+Z1 dE:\Project\ALU\simulation\modelsim
+w1710534890
+8E:/Project/ALU/ALU.v
+FE:/Project/ALU/ALU.v
+L0 1
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1710704704.257000
+!s107 E:/Project/ALU/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Project/ALU|E:/Project/ALU/ALU.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+E:/Project/ALU -O0
+n@a@l@u

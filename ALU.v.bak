@@ -1,0 +1,70 @@
+module ALU(
+    input [3:0] A,
+    input [3:0] B,
+    input Enter,
+    input s3, s2, s1, s0, Cin,
+    output reg [3:0] F,
+    output reg Cout
+);
+wire [3:0]B_compliment;
+wire [3:0]Cin1_compliment;
+assign B_compliment=~B;
+
+reg [3:0] Cin1;
+initial begin
+    Cin1 = 4'b0001;
+end
+assign Cin1_compliment=~Cin1;
+
+always @(posedge Enter) 
+	begin
+		if (s3==1'b0 && s2==1'b0 && s1==1'b0 && s0==1'b0 && Cin==1'b0)//Transfer A 
+			begin
+				F <= A;
+				Cout <= 1'b0; 
+			end
+			
+			
+		else if (s3==1'b0 && s2==1'b0 && s1==1'b0 && s0==1'b0 && Cin==1'b1)//INC A 
+			begin
+				{Cout, F} = A +  Cin1;
+			end
+			
+			
+		else if (s3==1'b0 && s2==1'b0 && s1==1'b0 && s0==1'b1 && Cin==1'b0) //ADDITION without carry
+			begin
+				{Cout, F} = A +  B;
+			end
+			
+			
+		
+		else if (s3==1'b0 && s2==1'b0 && s1==1'b0 && s0==1'b1 && Cin==1'b1) //Add with Carry
+			begin
+				{Cout, F} = A + B + Cin1;
+			end
+		else if (s3==1'b0 && s2==1'b0 && s1==1'b1 && s0==1'b0 && Cin==1'b0) //Subtraction With borrow
+   		/*2'compliment=B_Compliment+1
+				With borrow che mate pela kyakthi borrow che tene minus karvanu mate
+				b_compliment=1-1
+				ultimately b_compliment j rahe
+			*/
+			begin
+				{Cout, F} = A + B_compliment;
+			end
+		else if (s3==1'b0 && s2==1'b0 && s1==1'b1 && s0==1'b0 && Cin==1'b1) //Subtraction
+			begin
+				{Cout, F} = A + B_compliment+Cin1;
+			end
+		else if (s3==1'b0 && s2==1'b0 && s1==1'b1 && s0==1'b1 && Cin==1'b0) //Decrement
+			begin
+				{Cout, F} = A + Cin1_compliment;
+			end
+		else if (s3==1'b0 && s2==1'b0 && s1==1'b1 && s0==1'b1 && Cin==1'b1) //Transfer
+			begin
+				F <= A;
+				Cout <= 1'b0; 
+			end
+	end
+endmodule
+
+

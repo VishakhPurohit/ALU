@@ -1,0 +1,124 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do ALU_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+E:/Project/ALU {E:/Project/ALU/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+vsim work.ALU
+# vsim work.ALU 
+# Loading work.ALU
+force -freeze sim:/ALU/Enter 0 0, 1 {50 ps} -r 100
+force -freeze sim:/ALU/s3 1 0
+force -freeze sim:/ALU/s3 0 0, 1 {100 ps} -r 200
+force -freeze sim:/ALU/s2 1 0
+force -freeze sim:/ALU/s2 0 0, 1 {150 ps} -r 300
+force -freeze sim:/ALU/s1 1 0
+force -freeze sim:/ALU/s1 0 0, 1 {200 ps} -r 400
+force -freeze sim:/ALU/s0 1 0
+force -freeze sim:/ALU/s0 0 0, 1 {250 ps} -r 500
+force -freeze sim:/ALU/Cin 1 0
+force -freeze sim:/ALU/Cin 0 0, 1 {300 ps} -r 600
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -continue
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -all
+# Break key hit 
+# Simulation stop requested.
